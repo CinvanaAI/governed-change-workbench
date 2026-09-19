@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "governed-change-workbench"
+version = "1.0.0"
+description = "A durable, state-guarded implementation, review, audit, and synthesis workflow."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE.md"]
+
+[project.scripts]
+governed-change-workbench-demo = "governed_change_workbench.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["governed_change_workbench*"]

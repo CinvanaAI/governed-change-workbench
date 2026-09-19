@@ -1,0 +1,11 @@
+{
+  "kind": "captured synthetic execution projection",
+  "command": "python -m examples.failure_and_retry",
+  "input_example": "examples/failure_and_retry.py",
+  "observed_output": {
+    "after_failure": "implementation_ready",
+    "after_retry": "implementation_complete",
+    "preserved_failures": 1
+  },
+  "projection_note": "Selected fields from a successful local run. Machine paths, temporary identifiers and execution timestamps are omitted. Re-run the linked example for fresh evidence."
+}
