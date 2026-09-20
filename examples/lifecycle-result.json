@@ -1,0 +1,51 @@
+{
+  "states": [
+    "conversation",
+    "implementation_ready",
+    "implementation_complete",
+    "review_complete",
+    "audit_ready",
+    "audit_complete",
+    "synthesis_complete"
+  ],
+  "unauthorized_calls": 0,
+  "failed_attempt_preserved": true,
+  "restart_before_retry": true,
+  "frozen_hashes_match_dispatched_text": true,
+  "calls": [
+    {
+      "phase": "implementation",
+      "prompt": "Implement the following change in the supplied project boundary.\n\nIntent summary:\nCurrent requested change:\n- Add an empty-input check to a synthetic text normalizer.\n\nMost recent request:\nAdd an empty-input check to a synthetic text normalizer.\n\nRequired evidence:\n- identify files or artifacts changed;\n- report validation performed;\n- distinguish observed results from assumptions;\n- report remaining risks and do not claim completion without evidence.",
+      "result": {
+        "run_outcome": "complete",
+        "raw_output": "Synthetic implementation response; no project was changed."
+      }
+    },
+    {
+      "phase": "review",
+      "prompt": "Review the implementation evidence against the frozen requested change. Identify omissions, weak claims, risks, and likely regressions.\n\nFrozen prompt SHA-256: d23333d8c0b6663c447440d7115fe3ae3e92962aa84c0f88e59128fc0b8ed831\nFrozen prompt:\nImplement the following change in the supplied project boundary.\n\nIntent summary:\nCurrent requested change:\n- Add an empty-input check to a synthetic text normalizer.\n\nMost recent request:\nAdd an empty-input check to a synthetic text normalizer.\n\nRequired evidence:\n- identify files or artifacts changed;\n- report validation performed;\n- distinguish observed results from assumptions;\n- report remaining risks and do not claim completion without evidence.\n\nImplementation result:\n{\n  \"raw_output\": \"Synthetic implementation response; no project was changed.\",\n  \"run_outcome\": \"complete\"\n}\n",
+      "result": {
+        "run_outcome": "complete",
+        "raw_output": "Synthetic review response; no project was changed."
+      }
+    },
+    {
+      "phase": "audit",
+      "prompt": "Independently audit the implementation and the review. Focus on correctness, regressions, unsupported assumptions, and unverified completion claims.\n\nIntent:\nCurrent requested change:\n- Add an empty-input check to a synthetic text normalizer.\n\nReview findings:\nSynthetic review response; no project was changed.",
+      "result": {
+        "run_outcome": "complete",
+        "raw_output": "Synthetic audit response; no project was changed."
+      }
+    },
+    {
+      "phase": "synthesis",
+      "prompt": "Return a concise evidence-grounded conclusion: what changed, what is verified, what remains weak, warnings, and the best next step.\n\nIntent:\nCurrent requested change:\n- Add an empty-input check to a synthetic text normalizer.\n\nReview:\nSynthetic review response; no project was changed.\n\nAudit:\n{\n  \"raw_output\": \"Synthetic audit response; no project was changed.\",\n  \"run_outcome\": \"complete\"\n}\n",
+      "result": {
+        "run_outcome": "complete",
+        "raw_output": "Synthetic synthesis response; no project was changed."
+      }
+    }
+  ],
+  "final_status_after_restart": "synthesis_complete",
+  "real_project_changes": false
+}
